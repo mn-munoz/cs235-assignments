@@ -20,7 +20,7 @@ class Stack {
         void pop() {
             m_data.pop_back();
         }
-        T& top() {
+        const T& top() {
             return m_data.at(m_data.size()-1);
         }
 };
