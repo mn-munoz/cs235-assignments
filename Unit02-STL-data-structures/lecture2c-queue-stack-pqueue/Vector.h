@@ -13,7 +13,7 @@ class Stack {
             return m_data.empty();
         }
 
-        void push(const T& item) {
+        void push(const T& item) { 
             m_data.push_back(item);
         }
 
