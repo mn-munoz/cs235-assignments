@@ -60,8 +60,5 @@ int main(int argc, char const* argv[]) {
         cerr << error.what() << endl;
         return 2;
     }
-
-
-
     return 0;
 }
