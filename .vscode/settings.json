@@ -64,5 +64,6 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp"
-    }
+    },
+    "makefile.makefilePath": "~/Documents/CS 235/cs235-assignments/Unit01-Intro-to-cpp/homework1c-references"
 }

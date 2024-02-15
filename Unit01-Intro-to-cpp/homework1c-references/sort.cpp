@@ -1,8 +1,15 @@
 #include <iostream>
 #include <string>
 
+using std::string;
+
 void sort(std::string& a, std::string& b, std::string& c) {
-    // implement sort here
+    string temp;
+    if (a > b) {
+        temp = a;
+        b = a;
+        b = temp;
+    }
 }
 
 int main(int argc, char const* argv[]) {
