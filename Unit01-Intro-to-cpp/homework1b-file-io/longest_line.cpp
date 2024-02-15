@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <sstream>
 
-using std::cout, std::endl;
+using std::cout, std::endl, std::cerr;
 
 using std::string, std::stringstream, std::ifstream;
 
@@ -40,6 +40,7 @@ string countLines(const string &filename) {
         }
     }
 
+    file.close();
     return longest_line;
 }
 
@@ -52,7 +53,13 @@ int main(int argc, char const* argv[]) {
         return 1;
     }
 
-    cout << countLines(argv[1]) << endl;
+    try {
+        cout << countLines(argv[1]) << endl;
+    }
+    catch (std::invalid_argument error) {
+        cerr << error.what() << endl;
+        return 2;
+    }
 
 
 
