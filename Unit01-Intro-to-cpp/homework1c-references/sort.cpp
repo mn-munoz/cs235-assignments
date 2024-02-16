@@ -2,13 +2,23 @@
 #include <string>
 
 using std::string;
+using std::cout, std:: endl;
 
 void sort(std::string& a, std::string& b, std::string& c) {
     string temp;
-    if (a > b) {
-        temp = a;
-        b = a;
-        b = temp;
+    
+    for (int i = 0; i < 3; i++) {
+        if (a > b) {
+            temp = a;
+            a = b;
+            b = temp;
+        }
+        
+        if (b > c) {
+            temp = b;
+            b = c;
+            c = temp;
+        }
     }
 }
 
