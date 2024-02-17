@@ -48,6 +48,8 @@ int main(int argc, char const* argv[]) {
     // Write your code here
 
     if (argc < 2) {
+        
+
         cout << "Minimum of two argumetns" << endl;
 
         return 1;
