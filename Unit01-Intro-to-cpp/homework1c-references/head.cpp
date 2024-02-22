@@ -8,18 +8,27 @@ using std::ifstream, std::istream;
 
 
 
-void printLines(istream& ins, int c = 10) {
+// void heads(istream& ins = cin, int c = 10) {
+//     string line;
+//     int count = 0;
+
+//     while (!ins.eof() && count < c) {
+//         getline(ins, line);
+//         cout << line << endl;
+//         count++;
+//     }
+// }
+void heads(istream& ins = cin, int c = 10) {
     string line;
     int count = 0;
 
-    while (!ins.eof() && count < c) {
-        getline(ins, line);
+    while (getline(ins, line) && count < c) {
         cout << line << endl;
         count++;
     }
 }
 
-void heads(const string& filename) {
+void heads(const string& filename, int c = 10) {
     ifstream file;
     file.open(filename);
 
@@ -28,26 +37,35 @@ void heads(const string& filename) {
         exit(2);
     }
 
-    printLines(file, 15);
+    heads(file, c);
 
     file.close();
 }
 
 int main(int argc, char const* argv[]) {
 
-    if (argc < 2) {
-        cerr << "Minimum of 1 argument required" << endl;
-        return 1;
+    if (argc == 1 ) {
+        heads();
     }
 
     if (argc == 2) {
-        heads(argv[1]);
+        string arg = argv[1];
+        if (arg.at(0) == '-') {
+            int c = stoi(arg.substr(1));
+            heads(cin, c);
+        }
+        else {
+            string fileName = argv[1];
+            heads(fileName);
+        }
     }
 
-
-
-    cout << "done" << endl;
-
+    if (argc == 3) {
+        string num = argv[1];
+        string fileName = argv[2];
+        int c = stoi(num.substr(1));
+        heads(fileName, c);
+    }
 
     return 0;
 }

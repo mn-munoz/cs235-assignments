@@ -2,7 +2,11 @@
 #include <string>
 
 int main(int argc, char const* argv[]) {
-    // Write your code here
+    if (/* condition */)
+    {
+        /* code */
+    }
+    
 
     return 0;
 }
