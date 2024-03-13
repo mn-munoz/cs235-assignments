@@ -14,16 +14,25 @@ public:
         Node(T v) : prev(nullptr), next(nullptr), value(v) {}
     };
 
-    DLList() {}
+    DLList(): m_head(null), m_tail(nullptr), m_size(0) {}
 
     ~DLList() {}
 
     const Node* get_head() const {
         // implement get_head here
+        return m_head;
     }
 
     void push_front(T item) {
         // implement push_front here
+
+        Node * ptr = new Node(item);
+        if (m_head != nullptr ) {
+            m_head ->prev = ptr;
+            ptr -> next = m_head;
+        }
+        
+        m_head = ptr;
     }
     void push_back(T item) {
         // implement push_back here
@@ -58,6 +67,7 @@ public:
 
     int size() const {
         // implement size here
+        return m_size;
     }
 
     void clear() {
