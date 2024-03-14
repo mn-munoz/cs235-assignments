@@ -8,7 +8,7 @@
         "program": "${fileDirname}/${fileBasenameNoExtension}",
         "args": [
             // "-std=c++17",
-            "3"
+            "2"
         ],
         "stopAtEntry": false,
         "cwd": "${fileDirname}",
