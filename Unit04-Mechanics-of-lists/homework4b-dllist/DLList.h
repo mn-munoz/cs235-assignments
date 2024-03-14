@@ -73,4 +73,7 @@ public:
     void clear() {
         // implement clear here
     }
+
+    private:
+        
 };

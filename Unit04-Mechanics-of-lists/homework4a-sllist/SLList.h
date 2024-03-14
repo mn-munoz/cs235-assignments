@@ -10,16 +10,18 @@ public:
         Node(T v) : next(nullptr), value(v) {}
     };
 
-    SLList() {}
+    SLList() {head(nullptr), size(0)}
 
     ~SLList() {}
 
     const Node* get_head() const {
         // implement get_head here
+        return head;
     }
 
     void push_back(T item) {
         // implement push_back here
+
     }
 
     void pop_back() {
@@ -32,9 +34,15 @@ public:
 
     int size() const {
         // implement size here
+        return size;
     }
 
     void clear() {
         // implement clear here
     }
+
+    private:
+
+    Node* head;
+    int size;
 };
