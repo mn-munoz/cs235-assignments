@@ -10,14 +10,12 @@ int medianOfThree(std::vector<T>& array, int left, int right) {
 
     int middle = (left + right) / 2;
 
-    // case where left is the median
-
     if (array.at(left) > array.at(middle) ) {
         swap(array.at(left), array.at(middle));
     }
 
     if (array.at(middle) > array.at(right) ) {
-        swap(array.at(right), array.at(middle)); 
+        swap(array.at(middle), array.at(right)); 
 
         if (array.at(left) > array.at(middle)) {
             swap(array.at(left), array.at(middle));
@@ -32,18 +30,18 @@ int partition(std::vector<T>& array, int left, int right) {
     // implement partition here
 
     int middle = medianOfThree(array, left, right);
-
     swap(array.at(left), array.at(middle));
 
+    T pivot = array.at(left);
     int up = left + 1;
     int down = right;
 
     do {
-        while (array.at(up) <= array.at(left) && up < right) {
+        while (array.at(up) <= pivot && up < right) {
             up++;
         }
 
-        while(array.at(down) > array.at(left) && down > left) {
+        while(array.at(down) > pivot && down > left) {
             down--;
         }
 
@@ -59,7 +57,7 @@ int partition(std::vector<T>& array, int left, int right) {
 }
 
 template<class T>
-void quicksort(std::vector<T> array, int left, int right) {
+void quicksort(std::vector<T>&array, int left, int right) {
         if (right <= left) {
             return;
         }
