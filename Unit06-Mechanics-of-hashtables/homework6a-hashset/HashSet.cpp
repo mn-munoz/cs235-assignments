@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <list>
 #include <functional>
@@ -121,3 +120,18 @@ public:
         return hash<T>{}(item) % m_capacity;
     }
 };
+
+int main() {
+    HashSet<string> mySet;
+    mySet.insert("Tom");
+    mySet.insert("Denise");
+    cout << mySet << endl;
+    mySet.insert("Danae");
+    mySet.insert("Thomas");
+
+    cout << mySet << endl;
+
+    cout << boolalpha << mySet.contains("Danae") << endl;
+    cout << mySet.contains("Debra") << endl;
+    return 0;
+}
