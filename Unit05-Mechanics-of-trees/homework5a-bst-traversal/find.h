@@ -11,4 +11,18 @@ struct Node {
 bool find(Node* root, int item) {
     // implement find here
     // return true if item is in the subtree, false otherwise
-}
+    if (root == nullptr) {
+        return false;
+    }
+    if (root->value == item) {
+        return true;
+    } else {
+        
+    }
+    if (item < root->value) {
+        return find(root->left, item);
+    } else {
+        return find(root->right, item);
+    }
+}  
+

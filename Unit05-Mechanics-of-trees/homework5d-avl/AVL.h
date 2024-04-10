@@ -146,15 +146,15 @@ public:
     }
     // bool remove(Node*)
 
-    bool findItem(const Node* root, const T item) {
+    bool findItem(const Node* root, const T item) const {
         if (root->value == item) {
             return true;
         } else if (root == nullptr){
             return false;
         } else if (root->value < item) {
-            findItem(root->left);
+            findItem(root->left, item);
         } else {
-            findItem(root->right);
+            findItem(root->right, item);
         }
     }
 
