@@ -1,4 +1,9 @@
 {
     "makefile.makePath": "/Users/merleth/Documents/CS 235/cs235-assignments/Unit03-Sorting/homework3d-quicksort",
-    "makefile.makefilePath": "/Users/merleth/Documents/CS 235/cs235-assignments/Unit02-STL-data-structures/homework2c-pqueues/makefile"
+    "makefile.makefilePath": "/Users/merleth/Documents/CS 235/cs235-assignments/Unit02-STL-data-structures/homework2c-pqueues/makefile",
+    "files.associations": {
+        "*.ejs": "html",
+        "unordered_set": "cpp",
+        "vector": "cpp"
+    }
 }

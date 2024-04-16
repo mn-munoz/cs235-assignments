@@ -20,12 +20,12 @@ int main(int argc, char* argv[]) {
 
     // choose an implementation of a set by uncommenting the appropriate line
     // below
-    std::set<int> set;
+    // std::set<int> set;
     // std::unordered_set<int> set;
     // VectorSet<int> set;
     // BST<int> set;
     // AVL<int> set;
-    // HashSet<int> set;
+    HashSet<int> set;
 
     std::cout << "    N       " << "Time to insert" << std::endl;
     std::cout << "---------- ----------------" << std::endl;
@@ -38,10 +38,10 @@ int main(int argc, char* argv[]) {
             // uncommenting the appropriate line below
 
             // SEQUENTIAL DATA
-            set.insert(i);
+            // set.insert(i);
 
             // RANDOM DATA
-            // set.insert(rand());
+            set.insert(rand());
         }
 
         timer.stop();
